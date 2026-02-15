@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Students Affairs System</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+
+    <div class="navbar">
+      <div class="nav-brand">
+        <span class="brand-icon">🎓</span>
+        <span>Students Affairs</span>
+      </div>
+
+      <div class="nav-menu">
+        <button data-page="students" class="nav-link active">
+          <span class="nav-icon">👥</span>
+          Students
+        </button>
+        <button data-page="courses" class="nav-link">
+          <span class="nav-icon">📚</span>
+          Courses
+        </button>
+        <button data-page="instructors" class="nav-link">
+          <span class="nav-icon">👨‍🏫</span>
+          Instructors
+        </button>
+        <button data-page="employees" class="nav-link">
+          <span class="nav-icon">👔</span>
+          Employees
+        </button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="header"></div>
+
+      <label for="rowsSelect">Rows per page: </label>
+      <select id="rowsSelect">
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="25">25</option>
+      </select>
+
+      <div>
+        <input type="text"
+          placeholder="you can search with name , specialization ,office, department , position"
+          id="searchInput">
+      </div>
+
+      <div id="app"></div>
+
+      <button id="addElementBtn">Add New Element</button>
+
+      <div id="form-container"></div>
+      <div id="pagination"></div>
+    </div>
+
+    <script type="module" src="./src/index.js"></script>
+  </body>
+</html>
