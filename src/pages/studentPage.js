@@ -136,12 +136,7 @@ export default class StudentsPage {
       let valB = b[field];
 
       //~ Sort numbers
-      if (
-        field === "age" ||
-        field === "salary" ||
-        field === "coursesCount" ||
-        field === "studentsCount"
-      ) {
+      if (field === "age" || field === "coursesCount") {
         return order === "asc" ? valA - valB : valB - valA;
       }
 
