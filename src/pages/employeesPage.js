@@ -3,6 +3,7 @@ import Table from "../components/Table.js";
 import Form from "../components/Form.js";
 import Employee from "../models/Employee.js";
 import Instructor from "../models/Instructor.js";
+import scrollToForm from "../../helper/scrollToForm.js";
 
 const employeeFields = [
   { name: "name", label: "Name", type: "text", required: true },
@@ -50,6 +51,9 @@ export default class EmployeesPage {
   }
 
   setupEventListeners() {
+    const title = document.getElementById("pageName");
+    title.innerText = "Employees";
+
     const searchInput = document.getElementById("searchInput");
     if (searchInput) {
       searchInput.placeholder = "Search by name, position, or office";
@@ -133,7 +137,7 @@ export default class EmployeesPage {
 
     const table = new Table(
       "app",
-      ["id", "name", "age", "position", "office", "salary", "startDate"],
+      ["name", "age", "position", "office", "salary", "startDate"],
       dataToShow,
       (id) => this.edit(id),
       (id) => this.delete(id),
@@ -285,6 +289,7 @@ export default class EmployeesPage {
       "create",
     );
     form.render();
+    scrollToForm();
   }
 
   async edit(id) {
@@ -350,6 +355,7 @@ export default class EmployeesPage {
       data,
     );
     form.render();
+    scrollToForm();
   }
 
   async delete(id) {
@@ -386,9 +392,9 @@ export default class EmployeesPage {
       for (let char of name) {
         if (
           !(
-            (char >= "A" && char <= "Z") ||
-            (char >= "a" && char <= "z") ||
-            char === " "
+            (char >= "A" && char <= "Z")
+            || (char >= "a" && char <= "z")
+            || char === " "
           )
         ) {
           errors.push({
@@ -414,9 +420,9 @@ export default class EmployeesPage {
       for (let char of position) {
         if (
           !(
-            (char >= "A" && char <= "Z") ||
-            (char >= "a" && char <= "z") ||
-            char === " "
+            (char >= "A" && char <= "Z")
+            || (char >= "a" && char <= "z")
+            || char === " "
           )
         ) {
           errors.push({

@@ -2,6 +2,7 @@ import ApiService from "../services/apiService.js";
 import Table from "../components/Table.js";
 import Form from "../components/Form.js";
 import Instructor from "../models/Instructor.js";
+import scrollToForm from "../../helper/scrollToForm.js";
 
 const instructorFields = [
   { name: "name", label: "Name", type: "text", required: true },
@@ -35,6 +36,8 @@ export default class InstructorsPage {
   }
 
   setupEventListeners() {
+    const title = document.getElementById("pageName");
+    title.innerText = "Instructors";
     //& Search input
     const searchInput = document.getElementById("searchInput");
     if (searchInput) {
@@ -101,10 +104,10 @@ export default class InstructorsPage {
 
       //~ Sort numbers
       if (
-        field === "age" ||
-        field === "salary" ||
-        field === "coursesCount" ||
-        field === "studentsCount"
+        field === "age"
+        || field === "salary"
+        || field === "coursesCount"
+        || field === "studentsCount"
       ) {
         return order === "asc" ? valA - valB : valB - valA;
       }
@@ -138,14 +141,8 @@ export default class InstructorsPage {
     const dataToShow = tableData.slice(start, end);
 
     const columns = [
-      "id",
       "name",
-      "age",
       "specialization",
-      "position",
-      "office",
-      "salary",
-      "startDate",
       "department",
       "coursesCount",
       "studentsCount",
@@ -297,6 +294,7 @@ export default class InstructorsPage {
     );
 
     form.render();
+    scrollToForm();
   }
 
   //^ Edit Instructor
@@ -372,6 +370,7 @@ export default class InstructorsPage {
     );
 
     form.render();
+    scrollToForm();
   }
 
   //^ Delete Instructor

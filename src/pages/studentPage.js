@@ -2,6 +2,7 @@ import ApiService from "../services/apiService.js";
 import Table from "../components/Table.js";
 import Form from "../components/Form.js";
 import Student from "../models/Student.js";
+import scrollToForm from "../../helper/scrollToForm.js";
 
 const studentFields = [
   { name: "name", label: "Name", type: "text", required: true },
@@ -42,6 +43,8 @@ export default class StudentsPage {
   }
 
   setupEventListeners() {
+    const title = document.getElementById("pageName");
+    title.innerText = "Students";
     //& Search input
     const searchInput = document.getElementById("searchInput");
     if (searchInput) {
@@ -158,7 +161,7 @@ export default class StudentsPage {
 
     const table = new Table(
       "app",
-      ["id", "name", "age", "grade", "major", "advisorName", "coursesCount"],
+      ["name", "age", "grade", "major", "advisorName", "coursesCount"],
       dataToShow,
       (id) => this.edit(id),
       (id) => this.delete(id),
@@ -335,6 +338,7 @@ export default class StudentsPage {
       "create",
     );
     form.render();
+    scrollToForm();
   }
 
   //^ Edit Student
@@ -401,8 +405,8 @@ export default class StudentsPage {
           student.courses = updatedData.courses || [];
 
           if (
-            oldData.advisorId &&
-            oldData.advisorId !== updatedData.advisorId
+            oldData.advisorId
+            && oldData.advisorId !== updatedData.advisorId
           ) {
             try {
               const oldInstructor = await ApiService.getById(
@@ -447,11 +451,11 @@ export default class StudentsPage {
           }
 
           const coursesToRemove =
-            oldData.courses?.filter((c) => !updatedData.courses?.includes(c)) ||
-            [];
+            oldData.courses?.filter((c) => !updatedData.courses?.includes(c))
+            || [];
           const coursesToAdd =
-            updatedData.courses?.filter((c) => !oldData.courses?.includes(c)) ||
-            [];
+            updatedData.courses?.filter((c) => !oldData.courses?.includes(c))
+            || [];
 
           for (const crsId of coursesToRemove) {
             try {
@@ -492,6 +496,7 @@ export default class StudentsPage {
       formData,
     );
     form.render();
+    scrollToForm();
   }
 
   //^ Delete Student
@@ -510,7 +515,6 @@ export default class StudentsPage {
               const index = instructor.students.indexOf(id);
               if (index !== -1) {
                 instructor.students.splice(index, 1);
-                // تحديث المستشار في السيرفر
                 await ApiService.update(
                   "instructors",
                   student.advisorId,
@@ -562,9 +566,9 @@ export default class StudentsPage {
       for (let char of name) {
         if (
           !(
-            (char >= "A" && char <= "Z") ||
-            (char >= "a" && char <= "z") ||
-            char === " "
+            (char >= "A" && char <= "Z")
+            || (char >= "a" && char <= "z")
+            || char === " "
           )
         ) {
           errors.push({
@@ -602,9 +606,9 @@ export default class StudentsPage {
       for (let char of major) {
         if (
           !(
-            (char >= "A" && char <= "Z") ||
-            (char >= "a" && char <= "z") ||
-            char === " "
+            (char >= "A" && char <= "Z")
+            || (char >= "a" && char <= "z")
+            || char === " "
           )
         ) {
           errors.push({

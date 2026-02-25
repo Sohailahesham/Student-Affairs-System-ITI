@@ -2,6 +2,7 @@ import ApiService from "../services/apiService.js";
 import Table from "../components/Table.js";
 import Form from "../components/Form.js";
 import Course from "../models/Course.js";
+import scrollToForm from "../../helper/scrollToForm.js";
 
 const courseFields = [
   { name: "name", label: "Course Name", type: "text", required: true },
@@ -33,6 +34,8 @@ export default class CoursesPage {
   }
 
   setupEventListeners() {
+    const title = document.getElementById("pageName");
+    title.innerText = "Courses";
     //& Search input
     const searchInput = document.getElementById("searchInput");
     if (searchInput) {
@@ -52,7 +55,6 @@ export default class CoursesPage {
       };
     }
 
-    //& Add button
     const addBtn = document.getElementById("addElementBtn");
     if (addBtn) {
       addBtn.textContent = "Add New Course";
@@ -76,7 +78,6 @@ export default class CoursesPage {
     }
   }
 
-  //^ Prepare table data
   prepareTableData(courses) {
     const instructorMap = {};
     this.instructors.forEach((inst) => {
@@ -93,18 +94,15 @@ export default class CoursesPage {
     }));
   }
 
-  //^ Sort data
   sortData(data, field, order) {
     return [...data].sort((a, b) => {
       let valA = a[field];
       let valB = b[field];
 
-      //~ Sort numbers
       if (field === "credits" || field === "studentsCount") {
         return order === "asc" ? valA - valB : valB - valA;
       }
 
-      //~ Sort strings
       valA = valA?.toString().toLowerCase() || "";
       valB = valB?.toString().toLowerCase() || "";
 
@@ -114,7 +112,6 @@ export default class CoursesPage {
     });
   }
 
-  //^ Refresh Table
   async refreshTable() {
     let tableData = this.prepareTableData(this.filteredCourses);
 
@@ -126,7 +123,6 @@ export default class CoursesPage {
     this.renderPagination(tableData.length);
   }
 
-  //^ Render Table
   renderTable(tableData) {
     const start = (this.curr - 1) * this.rowsPP;
     const end = start + this.rowsPP;
@@ -134,7 +130,7 @@ export default class CoursesPage {
 
     const table = new Table(
       "app",
-      ["id", "name", "code", "credits", "instructorName", "studentsCount"],
+      ["name", "code", "credits", "instructorName", "studentsCount"],
       dataToShow,
       (id) => this.edit(id),
       (id) => this.delete(id),
@@ -146,7 +142,6 @@ export default class CoursesPage {
     table.render();
   }
 
-  //^ Handle Sort
   handleSort(field) {
     if (this.sortField === field) {
       this.sortOrder = this.sortOrder === "asc" ? "desc" : "asc";
@@ -158,7 +153,6 @@ export default class CoursesPage {
     this.refreshTable();
   }
 
-  //^ Search
   search() {
     const searchValue =
       document.getElementById("searchInput")?.value.toLowerCase() || "";
@@ -181,7 +175,6 @@ export default class CoursesPage {
     this.refreshTable();
   }
 
-  //^ Pagination
   renderPagination(totalItems) {
     const paginationContainer = document.getElementById("pagination");
     if (!paginationContainer) return;
@@ -209,7 +202,6 @@ export default class CoursesPage {
     }
   }
 
-  //^ Add Course
   async add() {
     const instructorOptions = this.instructors.map((inst) => ({
       value: inst.id,
@@ -285,9 +277,9 @@ export default class CoursesPage {
     );
 
     form.render();
+    scrollToForm();
   }
 
-  //^ Edit Course
   async edit(id) {
     const data = await ApiService.getById("courses", id);
     const course = Course.fromJson(data);
@@ -401,9 +393,9 @@ export default class CoursesPage {
     );
 
     form.render();
+    scrollToForm();
   }
 
-  //^ Delete Course
   async delete(id) {
     if (!confirm("Are you sure you want to delete this course?")) return;
 
@@ -446,7 +438,6 @@ export default class CoursesPage {
     }
   }
 
-  //^ Validate
   validate(name, code, credits, instructorId) {
     const errors = [];
 

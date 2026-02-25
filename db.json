@@ -60,7 +60,8 @@
       "courses": [
         "784512",
         "956784",
-        "890123"
+        "890123",
+        "902345"
       ]
     },
     {
@@ -69,7 +70,7 @@
       "age": 19,
       "grade": "A-",
       "major": "Computer Science",
-      "advisorId": "912345",
+      "advisorId": "891234",
       "courses": [
         "784512",
         "895623"
@@ -84,7 +85,8 @@
       "advisorId": "109878",
       "courses": [
         "901234",
-        "902345"
+        "902345",
+        "451830"
       ]
     },
     {
@@ -93,8 +95,9 @@
       "age": 22,
       "grade": "A",
       "major": "Medicine",
-      "advisorId": "109878",
+      "advisorId": "952262",
       "courses": [
+        "902345",
         "903456",
         "904567"
       ]
@@ -117,7 +120,7 @@
       "age": 21,
       "grade": "A",
       "major": "Computer Science",
-      "advisorId": "912345",
+      "advisorId": "891234",
       "courses": [
         "784512",
         "956784"
@@ -173,7 +176,7 @@
       "age": 22,
       "grade": "A-",
       "major": "Medicine",
-      "advisorId": "109878",
+      "advisorId": "952262",
       "courses": [
         "903456"
       ]
@@ -184,7 +187,7 @@
       "age": 20,
       "grade": "A",
       "major": "Computer Science",
-      "advisorId": "912345",
+      "advisorId": "891234",
       "courses": [
         "895623",
         "956784"
@@ -240,7 +243,7 @@
       "age": 20,
       "grade": "B",
       "major": "Medicine",
-      "advisorId": "109878",
+      "advisorId": "952262",
       "courses": [
         "904567"
       ]
@@ -251,7 +254,7 @@
       "age": 22,
       "grade": "A-",
       "major": "Computer Science",
-      "advisorId": "912345",
+      "advisorId": "891234",
       "courses": [
         "784512"
       ]
@@ -284,10 +287,24 @@
       "age": 23,
       "grade": "A",
       "major": "Computer Science",
-      "advisorId": "583421",
+      "advisorId": "687186",
       "courses": [
         "895623",
         "956784",
+        "890123",
+        "678901"
+      ]
+    },
+    {
+      "id": "668983",
+      "name": "Maha",
+      "age": 19,
+      "grade": "B",
+      "major": "Computer Science",
+      "advisorId": "754517",
+      "courses": [
+        "956784",
+        "234567",
         "890123"
       ]
     }
@@ -340,7 +357,7 @@
     },
     {
       "id": "583421",
-      "name": "Dr. Ahmed Samir",
+      "name": "Ahmed Samir",
       "age": 50,
       "position": "Professor",
       "office": "Office 305",
@@ -349,7 +366,7 @@
     },
     {
       "id": "672345",
-      "name": "Dr. Mona Gamal",
+      "name": "Mona Gamal",
       "age": 45,
       "position": "Associate Professor",
       "office": "Office 207",
@@ -358,7 +375,7 @@
     },
     {
       "id": "789012",
-      "name": "Dr. Karim Mostafa",
+      "name": "Karim Mostafa",
       "age": 48,
       "position": "Professor",
       "office": "Office 112",
@@ -367,7 +384,7 @@
     },
     {
       "id": "891234",
-      "name": "Dr. Noha Adel",
+      "name": "Noha Adel",
       "age": 38,
       "position": "Assistant Professor",
       "office": "Office 156",
@@ -376,7 +393,7 @@
     },
     {
       "id": "912345",
-      "name": "Dr. Tamer Hossam",
+      "name": "Tamer Hossam",
       "age": 52,
       "position": "Professor",
       "office": "Office 189",
@@ -385,7 +402,7 @@
     },
     {
       "id": "109878",
-      "name": "Dr. Shorouk Magdy",
+      "name": "Shorouk Magdy",
       "age": 40,
       "position": "Professor",
       "office": "Office 305",
@@ -394,7 +411,7 @@
     },
     {
       "id": "952262",
-      "name": "Dr. Alaa Ali",
+      "name": "Alaa Ali",
       "age": 65,
       "position": "Professor",
       "office": "Office 405",
@@ -403,16 +420,22 @@
     },
     {
       "id": "684802",
-      "name": "Dr. Sohaila Mohamed",
+      "name": "Sohaila Mohamed",
       "age": 30,
       "position": "Assistant Professor",
       "office": "Office 305",
       "salary": 12000,
-      "startDate": "2020-02-14"
+      "startDate": "2020-02-14",
+      "specialization": "Operating Systems",
+      "department": "Computer Science",
+      "courses": [],
+      "students": [
+        "901246"
+      ]
     },
     {
       "id": "351392",
-      "name": "Dr. Mariam Hamed",
+      "name": "Mariam Hamed",
       "age": 30,
       "position": "Assistant Professor",
       "office": "Office 310",
@@ -519,19 +542,77 @@
       "startDate": "2023-01-15"
     },
     {
-      "id": "567580",
-      "name": "Mohsen Ali",
-      "age": 40,
+      "id": "900732",
+      "name": "Jana Mahmoud",
+      "age": 26,
+      "position": "Librarian",
+      "office": "library",
+      "salary": 10000,
+      "startDate": "2026-02-15"
+    },
+    {
+      "id": "681429",
+      "name": "Mohamed Mahmoud",
+      "age": 30,
       "position": "Professor",
-      "office": "Office 305",
+      "office": "Office 405",
       "salary": 20000,
       "startDate": "2026-02-15"
+    },
+    {
+      "id": "989977",
+      "name": "Mawada Ayman",
+      "age": 30,
+      "position": "Professor",
+      "office": "Office 405",
+      "salary": 10000,
+      "startDate": "2026-02-15"
+    },
+    {
+      "id": "690473",
+      "name": "Mazen",
+      "age": 30,
+      "position": "Doctor",
+      "office": "Office 406",
+      "salary": 18000,
+      "startDate": "2026-02-01",
+      "specialization": "Frontend",
+      "department": "IT",
+      "courses": [],
+      "students": []
+    },
+    {
+      "id": "687186",
+      "name": "sohaila",
+      "age": 28,
+      "position": "Doctor",
+      "office": "Hospital",
+      "salary": 10000,
+      "startDate": "2026-02-16"
+    },
+    {
+      "id": "521283",
+      "name": "Lama",
+      "age": 23,
+      "position": "Librarian",
+      "office": "Central Library",
+      "salary": 10000,
+      "startDate": "2026-02-23"
+    },
+    {
+      "id": "754517",
+      "name": "Habeba Mansour",
+      "age": 30,
+      "position": "Professor",
+      "office": "Office 403",
+      "salary": 20000,
+      "startDate": "2026-02-01"
     }
   ],
   "instructors": [
     {
       "id": "583421",
-      "name": "Dr. Ahmed Samir",
+      "name": "Ahmed Samir",
       "age": 50,
       "position": "Professor",
       "office": "Office 305",
@@ -545,14 +626,16 @@
         "890123"
       ],
       "students": [
-        "347892",
         "456789",
-        "789012"
+        "789012",
+        "234567",
+        "678912",
+        "345689"
       ]
     },
     {
       "id": "672345",
-      "name": "Dr. Mona Gamal",
+      "name": "Mona Gamal",
       "age": 45,
       "position": "Associate Professor",
       "office": "Office 207",
@@ -566,12 +649,15 @@
       ],
       "students": [
         "567890",
-        "123467"
+        "123467",
+        "456780",
+        "789024",
+        "317902"
       ]
     },
     {
       "id": "789012",
-      "name": "Dr. Karim Mostafa",
+      "name": "Karim Mostafa",
       "age": 48,
       "position": "Professor",
       "office": "Office 112",
@@ -585,13 +671,13 @@
       ],
       "students": [
         "678901",
-        "345689",
+        "567801",
         "890135"
       ]
     },
     {
       "id": "891234",
-      "name": "Dr. Noha Adel",
+      "name": "Noha Adel",
       "age": 38,
       "position": "Assistant Professor",
       "office": "Office 156",
@@ -604,13 +690,15 @@
         "234567"
       ],
       "students": [
-        "456789",
-        "901246"
+        "890123",
+        "345678",
+        "678913",
+        "347892"
       ]
     },
     {
       "id": "912345",
-      "name": "Dr. Tamer Hossam",
+      "name": "Tamer Hossam",
       "age": 52,
       "position": "Professor",
       "office": "Office 189",
@@ -620,17 +708,17 @@
       "department": "Computer Science",
       "courses": [
         "956784",
-        "890123",
-        "217053"
+        "890123"
       ],
       "students": [
         "890123",
-        "678913"
+        "678913",
+        "901246"
       ]
     },
     {
       "id": "109878",
-      "name": "Dr. Shorouk Magdy",
+      "name": "Shorouk Magdy",
       "age": 40,
       "position": "Professor",
       "office": "Office 305",
@@ -650,7 +738,7 @@
     },
     {
       "id": "952262",
-      "name": "Dr. Alaa Ali",
+      "name": "Alaa Ali",
       "age": 65,
       "position": "Professor",
       "office": "Office 405",
@@ -669,7 +757,7 @@
     },
     {
       "id": "684802",
-      "name": "Dr. Sohaila Mohamed",
+      "name": "Sohaila Mohamed",
       "age": 30,
       "position": "Assistant Professor",
       "office": "Office 305",
@@ -678,11 +766,13 @@
       "specialization": "Operating Systems",
       "department": "Computer Science",
       "courses": [],
-      "students": []
+      "students": [
+        "901246"
+      ]
     },
     {
       "id": "351392",
-      "name": "Dr. Mariam Hamed",
+      "name": "Mariam Hamed",
       "age": 30,
       "position": "Assistant Professor",
       "office": "Office 310",
@@ -690,12 +780,14 @@
       "startDate": "2020-02-14",
       "specialization": "Computer Networks",
       "department": "Computer Science",
-      "courses": [],
+      "courses": [
+        "451830"
+      ],
       "students": []
     },
     {
       "id": "111222",
-      "name": "Dr. Mahmoud Samy",
+      "name": "Mahmoud Samy",
       "age": 55,
       "position": "Professor",
       "office": "Office 401",
@@ -708,7 +800,7 @@
     },
     {
       "id": "222333",
-      "name": "Dr. Hala Mahmoud",
+      "name": "Hala Mahmoud",
       "age": 42,
       "position": "Associate Professor",
       "office": "Office 208",
@@ -716,12 +808,14 @@
       "startDate": "2014-09-01",
       "specialization": "Statistics",
       "department": "Mathematics",
-      "courses": [],
+      "courses": [
+        "888901"
+      ],
       "students": []
     },
     {
       "id": "333444",
-      "name": "Dr. Wael Fathy",
+      "name": "Wael Fathy",
       "age": 49,
       "position": "Professor",
       "office": "Office 113",
@@ -734,7 +828,7 @@
     },
     {
       "id": "444555",
-      "name": "Dr. Rania Adel",
+      "name": "Rania Adel",
       "age": 37,
       "position": "Assistant Professor",
       "office": "Office 157",
@@ -747,7 +841,7 @@
     },
     {
       "id": "555666",
-      "name": "Dr. Amr Hassan",
+      "name": "Amr Hassan",
       "age": 53,
       "position": "Professor",
       "office": "Office 190",
@@ -760,7 +854,7 @@
     },
     {
       "id": "666777",
-      "name": "Dr. Ghada Kamel",
+      "name": "Ghada Kamel",
       "age": 41,
       "position": "Associate Professor",
       "office": "Office 209",
@@ -773,7 +867,7 @@
     },
     {
       "id": "777888",
-      "name": "Dr. Sherif Hamdy",
+      "name": "Sherif Hamdy",
       "age": 47,
       "position": "Professor",
       "office": "Office 114",
@@ -781,25 +875,27 @@
       "startDate": "2012-03-05",
       "specialization": "Astrophysics",
       "department": "Physics",
-      "courses": [],
+      "courses": [
+        "217053"
+      ],
       "students": []
     },
     {
       "id": "888999",
-      "name": "Dr. Lamiaa Said",
+      "name": "Lamiaa Said",
       "age": 36,
       "position": "Assistant Professor",
       "office": "Office 158",
       "salary": 12500,
       "startDate": "2018-09-01",
-      "specialization": "Human-Computer Interaction",
+      "specialization": "Human Computer Interaction",
       "department": "Computer Science",
       "courses": [],
       "students": []
     },
     {
       "id": "999000",
-      "name": "Dr. Hesham Mamdouh",
+      "name": "Hesham Mamdouh",
       "age": 58,
       "position": "Professor",
       "office": "Office 191",
@@ -812,7 +908,7 @@
     },
     {
       "id": "112233",
-      "name": "Dr. Eman Reda",
+      "name": "Eman Reda",
       "age": 39,
       "position": "Associate Professor",
       "office": "Office 210",
@@ -825,7 +921,7 @@
     },
     {
       "id": "223344",
-      "name": "Dr. Tarek El Sayed",
+      "name": "Tarek El Sayed",
       "age": 51,
       "position": "Professor",
       "office": "Office 115",
@@ -838,7 +934,7 @@
     },
     {
       "id": "334455",
-      "name": "Dr. Yasmine Khaled",
+      "name": "Yasmine Khaled",
       "age": 35,
       "position": "Assistant Professor",
       "office": "Office 159",
@@ -846,12 +942,14 @@
       "startDate": "2019-08-01",
       "specialization": "Cybersecurity",
       "department": "Computer Science",
-      "courses": [],
+      "courses": [
+        "191346"
+      ],
       "students": []
     },
     {
       "id": "445566",
-      "name": "Dr. Mohamed Reda",
+      "name": "Mohamed Reda",
       "age": 44,
       "position": "Associate Professor",
       "office": "Office 211",
@@ -864,7 +962,7 @@
     },
     {
       "id": "556677",
-      "name": "Dr. Nabil Fawzy",
+      "name": "Nabil Fawzy",
       "age": 56,
       "position": "Professor",
       "office": "Office 116",
@@ -877,7 +975,7 @@
     },
     {
       "id": "667788",
-      "name": "Dr. Somaya Ashraf",
+      "name": "Somaya Ashraf",
       "age": 33,
       "position": "Assistant Professor",
       "office": "Office 160",
@@ -890,7 +988,7 @@
     },
     {
       "id": "778899",
-      "name": "Dr. Adel Fathy",
+      "name": "Adel Fathy",
       "age": 60,
       "position": "Professor",
       "office": "Office 192",
@@ -898,21 +996,68 @@
       "startDate": "2004-03-15",
       "specialization": "Computer Architecture",
       "department": "Computer Science",
+      "courses": [
+        "191346"
+      ],
+      "students": []
+    },
+    {
+      "id": "989977",
+      "name": "Mawada Ayman",
+      "age": 30,
+      "position": "Professor",
+      "office": "Office 405",
+      "salary": 10000,
+      "startDate": "2026-02-15",
+      "specialization": "Databases",
+      "department": "Software Engineering",
       "courses": [],
       "students": []
     },
     {
-      "id": "567580",
-      "name": "Mohsen Ali",
-      "age": 40,
-      "position": "Professor",
-      "office": "Office 305",
-      "salary": 20000,
-      "startDate": "2026-02-15",
-      "specialization": "Artificial Intelligence",
-      "department": "Computer Science",
+      "id": "690473",
+      "name": "Mazen",
+      "age": 30,
+      "position": "Doctor",
+      "office": "Office 406",
+      "salary": 18000,
+      "startDate": "2026-02-01",
+      "specialization": "Frontend",
+      "department": "IT",
       "courses": [],
       "students": []
+    },
+    {
+      "id": "687186",
+      "name": "sohaila",
+      "age": 28,
+      "position": "Doctor",
+      "office": "Hospital",
+      "salary": 10000,
+      "startDate": "2026-02-16",
+      "specialization": "Backend",
+      "department": "IT",
+      "courses": [],
+      "students": [
+        "901246"
+      ]
+    },
+    {
+      "id": "754517",
+      "name": "Habeba Mansour",
+      "age": 30,
+      "position": "Professor",
+      "office": "Office 403",
+      "salary": 20000,
+      "startDate": "2026-02-01",
+      "specialization": "Databases",
+      "department": "Computer Science",
+      "courses": [
+        "217053"
+      ],
+      "students": [
+        "668983"
+      ]
     }
   ],
   "courses": [
@@ -954,7 +1099,8 @@
         "347892",
         "789012",
         "901246",
-        "456780"
+        "456780",
+        "668983"
       ]
     },
     {
@@ -965,7 +1111,8 @@
       "instructorId": "891234",
       "students": [
         "456789",
-        "890123"
+        "890123",
+        "668983"
       ]
     },
     {
@@ -977,7 +1124,8 @@
       "students": [
         "789012",
         "901246",
-        "678912"
+        "678912",
+        "668983"
       ]
     },
     {
@@ -1013,7 +1161,6 @@
       "students": [
         "678901",
         "567801",
-        "527399",
         "890135"
       ]
     },
@@ -1026,8 +1173,7 @@
       "students": [
         "678901",
         "567801",
-        "527399",
-        "345689"
+        "901246"
       ]
     },
     {
@@ -1035,8 +1181,10 @@
       "name": "JavaScript",
       "code": "JS102",
       "credits": 4,
-      "instructorId": "912345",
-      "students": []
+      "instructorId": "888999",
+      "students": [
+        "317902"
+      ]
     },
     {
       "id": "901234",
@@ -1046,7 +1194,8 @@
       "instructorId": "109878",
       "students": [
         "901234",
-        "789023"
+        "789023",
+        "317902"
       ]
     },
     {
@@ -1057,7 +1206,9 @@
       "instructorId": "109878",
       "students": [
         "901234",
-        "456790"
+        "456790",
+        "123456",
+        "789012"
       ]
     },
     {
@@ -1083,14 +1234,6 @@
       ]
     },
     {
-      "id": "111234",
-      "name": "Computer Ethics",
-      "code": "CS401",
-      "credits": 2,
-      "instructorId": "583421",
-      "students": []
-    },
-    {
       "id": "222345",
       "name": "Advanced Calculus",
       "code": "MATH301",
@@ -1112,15 +1255,10 @@
       "code": "CS450",
       "credits": 3,
       "instructorId": "111222",
-      "students": []
-    },
-    {
-      "id": "555678",
-      "name": "Probability Theory",
-      "code": "MATH250",
-      "credits": 3,
-      "instructorId": "445566",
-      "students": []
+      "students": [
+        "937405",
+        "668983"
+      ]
     },
     {
       "id": "666789",
@@ -1128,7 +1266,9 @@
       "code": "PHY210",
       "credits": 3,
       "instructorId": "556677",
-      "students": []
+      "students": [
+        "668983"
+      ]
     },
     {
       "id": "777890",
@@ -1136,38 +1276,26 @@
       "code": "CS310",
       "credits": 4,
       "instructorId": "684802",
-      "students": []
+      "students": [
+        "668983"
+      ]
     },
     {
-      "id": "888901",
-      "name": "Computer Networks",
-      "code": "CS320",
-      "credits": 4,
+      "id": "451830",
+      "name": "Math Two",
+      "code": "M101",
+      "credits": 3,
       "instructorId": "351392",
-      "students": []
+      "students": [
+        "901234"
+      ]
     },
     {
-      "id": "999012",
-      "name": "Software Engineering",
-      "code": "CS330",
-      "credits": 3,
-      "instructorId": "444555",
-      "students": []
-    },
-    {
-      "id": "111345",
-      "name": "Compiler Design",
-      "code": "CS440",
-      "credits": 4,
-      "instructorId": "555666",
-      "students": []
-    },
-    {
-      "id": "222456",
-      "name": "Computer Graphics",
-      "code": "CS460",
-      "credits": 3,
-      "instructorId": "999000",
+      "id": "191346",
+      "name": "AlgorithmsII",
+      "code": "ALG",
+      "credits": 2,
+      "instructorId": "754517",
       "students": []
     }
   ]
